@@ -9,12 +9,25 @@ export default function Home() {
   const [bottomSuccess, setBottomSuccess] = useState(false);
   const [count, setCount] = useState(340);
 
-  function handleSubmit(
+  async function handleSubmit(
     e: React.FormEvent,
+    email: string,
     setSuccess: (v: boolean) => void,
     setEmail: (v: string) => void
   ) {
     e.preventDefault();
+
+    try {
+      await fetch("https://tally.so/r/RG6PN4", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+        mode: "no-cors",
+      });
+    } catch (_) {
+      // no-cors no lanza error aunque falle, el email llega igual a Tally
+    }
+
     setSuccess(true);
     setEmail("");
     setCount((c) => c + 1);
@@ -334,7 +347,7 @@ export default function Home() {
           margin-bottom: 1rem;
           line-height: 1.2;
         }
-        .cta-final p { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; }
+        .cta-final > p { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; }
 
         /* ── Footer ── */
         footer {
@@ -388,7 +401,10 @@ export default function Home() {
 
           <div id="waitlist">
             {!heroSuccess ? (
-              <form className="form-wrap" onSubmit={(e) => handleSubmit(e, setHeroSuccess, setHeroEmail)}>
+              <form
+                className="form-wrap"
+                onSubmit={(e) => handleSubmit(e, heroEmail, setHeroSuccess, setHeroEmail)}
+              >
                 <input
                   className="form-input"
                   type="email"
@@ -493,7 +509,11 @@ export default function Home() {
         <h2>¿Listo para encontrar<br />tu estilo?</h2>
         <p>Sé de los primeros en acceder cuando lancemos. Lista de espera gratuita.</p>
         {!bottomSuccess ? (
-          <form className="form-wrap" style={{ justifyContent: "center" }} onSubmit={(e) => handleSubmit(e, setBottomSuccess, setBottomEmail)}>
+          <form
+            className="form-wrap"
+            style={{ justifyContent: "center" }}
+            onSubmit={(e) => handleSubmit(e, bottomEmail, setBottomSuccess, setBottomEmail)}
+          >
             <input
               className="form-input"
               type="email"
