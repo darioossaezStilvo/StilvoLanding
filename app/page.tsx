@@ -400,27 +400,17 @@ export default function Home() {
           </p>
 
           <div id="waitlist">
-            {!heroSuccess ? (
-              <form
-                className="form-wrap"
-                onSubmit={(e) => handleSubmit(e, heroEmail, setHeroSuccess, setHeroEmail)}
-              >
-                <input
-                  className="form-input"
-                  type="email"
-                  placeholder="tu@email.com"
-                  value={heroEmail}
-                  onChange={(e) => setHeroEmail(e.target.value)}
-                  required
-                  aria-label="Tu correo electrónico"
-                />
-                <button type="submit" className="btn-primary">Quiero acceso →</button>
-              </form>
-            ) : (
-              <div className="success-msg">
-                ¡Ya estás dentro 🎉 Te avisamos en cuanto abramos acceso.
-              </div>
-            )}
+            <div style={{ maxWidth: 480, margin: "0 auto 1rem" }}>
+  <iframe
+    src="https://tally.so/embed/RG6PN4?alignLeft=1&hideTitle=1&transparentBackground=1"
+    width="100%"
+    height="120"
+    frameBorder={0}
+    style={{ border: "none" }}
+    title="Lista de espera Stilvo"
+  />
+</div>
+<p className="form-note">Sin spam. Solo te avisamos cuando lancemos.</p>
             <p className="form-note">Sin spam. Solo te avisamos cuando lancemos.</p>
           </div>
 
@@ -508,28 +498,17 @@ export default function Home() {
       <section className="cta-final">
         <h2>¿Listo para encontrar<br />tu estilo?</h2>
         <p>Sé de los primeros en acceder cuando lancemos. Lista de espera gratuita.</p>
-        {!bottomSuccess ? (
-          <form
-            className="form-wrap"
-            style={{ justifyContent: "center" }}
-            onSubmit={(e) => handleSubmit(e, bottomEmail, setBottomSuccess, setBottomEmail)}
-          >
-            <input
-              className="form-input"
-              type="email"
-              placeholder="tu@email.com"
-              value={bottomEmail}
-              onChange={(e) => setBottomEmail(e.target.value)}
-              required
-              aria-label="Tu correo electrónico"
-            />
-            <button type="submit" className="btn-primary">Unirme a la lista →</button>
-          </form>
-        ) : (
-          <div className="success-msg" style={{ maxWidth: 480, margin: "0 auto" }}>
-            ¡Ya estás dentro 🎉 Te avisamos en cuanto abramos acceso.
-          </div>
-        )}
+        <div style={{ maxWidth: 480, margin: "0 auto 1rem" }}>
+  <iframe
+    src="https://tally.so/embed/RG6PN4?alignLeft=1&hideTitle=1&transparentBackground=1"
+    width="100%"
+    height="120"
+    frameBorder={0}
+    style={{ border: "none" }}
+    title="Lista de espera Stilvo"
+  />
+</div>
+<p className="form-note" style={{ marginTop: "0.75rem" }}>Sin spam. Solo te avisamos cuando lancemos.</p>
         <p className="form-note" style={{ marginTop: "0.75rem" }}>Sin spam. Solo te avisamos cuando lancemos.</p>
       </section>
 
