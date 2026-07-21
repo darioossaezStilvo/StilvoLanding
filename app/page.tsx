@@ -10,28 +10,28 @@ export default function Home() {
   const [count, setCount] = useState(340);
 
   async function handleSubmit(
-  e: React.FormEvent,
-  email: string,
-  setSuccess: (v: boolean) => void,
-  setEmail: (v: string) => void
-) {
-  e.preventDefault();
+    e: React.FormEvent,
+    email: string,
+    setSuccess: (v: boolean) => void,
+    setEmail: (v: string) => void
+  ) {
+    e.preventDefault();
 
-  const formData = new FormData();
-  formData.append("email", email);
+    const formData = new FormData();
+    formData.append("email", email);
 
-  try {
-    await fetch("https://tally.so/r/RG6PN4", {
-      method: "POST",
-      body: formData,
-      mode: "no-cors",
-    });
-  } catch (_) {}
+    try {
+      await fetch("https://tally.so/r/RG6PN4", {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
+    } catch (_) {}
 
-  setSuccess(true);
-  setEmail("");
-  setCount((c) => c + 1);
-}
+    setSuccess(true);
+    setEmail("");
+    setCount((c) => c + 1);
+  }
 
   return (
     <>
@@ -57,7 +57,6 @@ export default function Home() {
           overflow-x: hidden;
         }
 
-        /* ── Nav ── */
         .nav {
           position: fixed;
           top: 0; left: 0; right: 0;
@@ -92,7 +91,6 @@ export default function Home() {
         }
         .nav-cta:hover { background: var(--accent); }
 
-        /* ── Hero ── */
         .hero {
           min-height: 100vh;
           display: flex;
@@ -132,7 +130,6 @@ export default function Home() {
           line-height: 1.7;
         }
 
-        /* ── Form ── */
         .form-wrap {
           display: flex;
           gap: 0.6rem;
@@ -183,7 +180,6 @@ export default function Home() {
           margin: 0 auto;
         }
 
-        /* ── Counter ── */
         .counter {
           margin-top: 2.5rem;
           display: flex;
@@ -208,7 +204,6 @@ export default function Home() {
         .counter-text { font-size: 0.85rem; color: var(--muted); }
         .counter-text strong { color: var(--primary); font-weight: 600; }
 
-        /* ── Benefits ── */
         .benefits {
           padding: 6rem 2rem;
           max-width: 1100px;
@@ -266,7 +261,6 @@ export default function Home() {
         }
         .benefit-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
 
-        /* ── How ── */
         .how {
           background: var(--primary);
           color: var(--cream);
@@ -292,7 +286,6 @@ export default function Home() {
         .step h3 { font-size: 1.05rem; font-weight: 600; color: var(--cream); }
         .step p { font-size: 0.9rem; color: rgba(250,246,241,0.65); line-height: 1.65; }
 
-        /* ── Social proof ── */
         .social-proof {
           padding: 6rem 2rem;
           max-width: 1100px;
@@ -333,7 +326,6 @@ export default function Home() {
         .quote-name { font-size: 0.85rem; font-weight: 600; color: var(--primary); }
         .quote-handle { font-size: 0.78rem; color: var(--muted); }
 
-        /* ── CTA final ── */
         .cta-final {
           background: var(--latte);
           padding: 6rem 2rem;
@@ -349,7 +341,6 @@ export default function Home() {
         }
         .cta-final > p { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; }
 
-        /* ── Footer ── */
         footer {
           background: var(--dark);
           color: rgba(250,246,241,0.5);
@@ -366,7 +357,6 @@ export default function Home() {
         }
         .footer-logo span { font-weight: 300; color: var(--accent); }
 
-        /* ── Responsive ── */
         @media (max-width: 600px) {
           .nav { padding: 1rem 1.25rem; }
           .hero { padding: 7rem 1.25rem 4rem; }
@@ -537,7 +527,7 @@ export default function Home() {
       <footer>
         <span className="footer-logo">stil<span>vo</span></span>
         <p>© 2026 Stilvo. Todos los derechos reservados.</p>
-        <p style={{ marginTop: "0.5rem" }}>Tu estilo. Gente real. Un solo lugar.</p>
+        <p style={{ marginTop: "0.5rem" }}>Tu estilo. Gente real. Un solo .</p>
       </footer>
     </>
   );

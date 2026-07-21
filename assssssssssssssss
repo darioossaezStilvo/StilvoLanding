@@ -1,0 +1,23 @@
+[33mcommit 68e3d2f1d358af4f98d107eb3b9e64ffc53deae1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: DrSaez <darioossaez@gmail.com>
+Date:   Tue Jul 21 16:47:29 2026 +0200
+
+    restaurar formulario propio con envio a Tally
+
+[33mcommit 1563016f585565ff4fb8b17fb107c423d7f85505[m
+Author: DrSaez <darioossaez@gmail.com>
+Date:   Mon Jul 20 14:03:24 2026 +0200
+
+    formulario Tally embed
+
+[33mcommit c97b1815956eb3462b8523fccb892b9da75c3321[m
+Author: DrSaez <darioossaez@gmail.com>
+Date:   Mon Jul 20 13:46:46 2026 +0200
+
+    conectar formulario con Tally
+
+[33mcommit ee12f7d672c82208ab69d67bf604ce3995a8ec50[m
+Author: DrSaez <darioossaez@gmail.com>
+Date:   Mon Jul 20 13:11:50 2026 +0200
+
+    primer commit stilvo landing
