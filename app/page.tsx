@@ -17,14 +17,11 @@ export default function Home() {
   ) {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("email", email);
-
     try {
-      await fetch("https://tally.so/r/RG6PN4", {
+      await fetch("https://formspree.io/f/mbdnagdl", {
         method: "POST",
-        body: formData,
-        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
     } catch (_) {}
 
@@ -527,7 +524,7 @@ export default function Home() {
       <footer>
         <span className="footer-logo">stil<span>vo</span></span>
         <p>© 2026 Stilvo. Todos los derechos reservados.</p>
-        <p style={{ marginTop: "0.5rem" }}>Tu estilo. Gente real. Un solo .</p>
+        <p style={{ marginTop: "0.5rem" }}>Tu estilo. Gente real. Un solo lugar.</p>
       </footer>
     </>
   );
