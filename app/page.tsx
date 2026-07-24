@@ -353,6 +353,203 @@ export default function Home() {
           display: block;
         }
         .footer-logo span { font-weight: 300; color: var(--accent); }
+        hero-split {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 8rem 5vw 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+ 
+.hero-left .hero-eyebrow {
+  margin-bottom: 1.5rem;
+}
+ 
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+ 
+.hero-title em {
+  font-style: normal;
+  color: var(--accent);
+}
+ 
+.hero-left .hero-sub {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--muted);
+  max-width: 440px;
+  margin: 0 0 2rem;
+  line-height: 1.7;
+}
+ 
+.hero-left .form-wrap {
+  margin: 0 0 1rem;
+  justify-content: flex-start;
+}
+ 
+.hero-left .counter {
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+ 
+/* ── iPhone wrapper ── */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+ 
+.iphone-wrapper {
+  animation: iphoneFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+ 
+@keyframes iphoneFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+.iphone-frame {
+  position: relative;
+  width: min(280px, 42vw);
+  aspect-ratio: 9 / 19.5;
+  background: linear-gradient(160deg, #2a2a2a 0%, #1a1a1a 40%, #111 100%);
+  border-radius: 52px;
+  box-shadow:
+    0 0 0 1.5px #3a3a3a,
+    0 0 0 3px #1a1a1a,
+    0 40px 80px rgba(0,0,0,0.45),
+    0 20px 40px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  padding: 14px;
+}
+ 
+.iphone-island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 28px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+}
+ 
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+ 
+/* Botones laterales derechos */
+.iphone-btn-right {
+  position: absolute;
+  right: -3px;
+  width: 3px;
+  background: #2a2a2a;
+  border-radius: 0 2px 2px 0;
+}
+.iphone-btn-right-1 {
+  top: 28%;
+  height: 14%;
+}
+.iphone-btn-right-2 {
+  top: 46%;
+  height: 20%;
+}
+ 
+/* Botones laterales izquierdos */
+.iphone-btn-left {
+  position: absolute;
+  left: -3px;
+  width: 3px;
+  background: #2a2a2a;
+  border-radius: 2px 0 0 2px;
+}
+.iphone-btn-left-1 {
+  top: 20%;
+  height: 6%;
+}
+.iphone-btn-left-2 {
+  top: 30%;
+  height: 10%;
+}
+.iphone-btn-left-3 {
+  top: 44%;
+  height: 10%;
+}
+ 
+/* Efecto cristal */
+.iphone-glass {
+  position: absolute;
+  inset: 14px;
+  border-radius: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.01) 40%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 20;
+}
+ 
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 7rem 1.5rem 4rem;
+    gap: 3rem;
+  }
+  .hero-left {
+    align-items: center;
+  }
+  .hero-left .hero-sub {
+    margin: 0 auto 2rem;
+  }
+  .hero-left .form-wrap {
+    justify-content: center;
+  }
+  .hero-left .counter {
+    justify-content: center;
+  }
+  .iphone-frame {
+    width: min(220px, 55vw);
+  }
+}
+ 
+@media (max-width: 480px) {
+  .iphone-frame {
+    width: min(180px, 60vw);
+  }
+}
 
         @media (max-width: 600px) {
           .nav { padding: 1rem 1.25rem; }
@@ -372,10 +569,10 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="hero">
-        <div className="hero-inner">
+       <section className="hero-split">
+        <div className="hero-left">
           <div className="hero-eyebrow">Próximamente · Únete a la lista de espera</div>
-          <h1>
+          <h1 className="hero-title">
             Tu estilo.<br />
             Gente <em>real.</em><br />
             Un solo lugar.
@@ -385,7 +582,7 @@ export default function Home() {
             Stilvo es la red social donde personas reales comparten sus outfits
             y la IA te ayuda a encontrar las prendas exactas que ves.
           </p>
-
+ 
           <div id="waitlist">
             {!heroSuccess ? (
               <form
@@ -410,7 +607,7 @@ export default function Home() {
             )}
             <p className="form-note">Sin spam. Solo te avisamos cuando lancemos.</p>
           </div>
-
+ 
           <div className="counter">
             <div className="counter-avatars">
               <span style={{ background: "#8B6355" }}>A</span>
@@ -423,6 +620,40 @@ export default function Home() {
             </p>
           </div>
         </div>
+ 
+        {/* iPhone */}
+        <div className="hero-right">
+          <div className="iphone-wrapper">
+            <div className="iphone-frame">
+              {/* Isla dinámica */}
+              <div className="iphone-island" />
+              {/* Pantalla con la animación */}
+              <div className="iphone-screen">
+                <iframe
+                  src="/stilvo-demo/demo.html"
+                  title="Stilvo app preview"
+                  scrolling="no"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    border: "none",
+                    borderRadius: "38px",
+                    display: "block",
+                  }}
+                />
+              </div>
+              {/* Botón lateral derecho */}
+              <div className="iphone-btn-right iphone-btn-right-1" />
+              <div className="iphone-btn-right iphone-btn-right-2" />
+              {/* Botones izquierda */}
+              <div className="iphone-btn-left iphone-btn-left-1" />
+              <div className="iphone-btn-left iphone-btn-left-2" />
+              <div className="iphone-btn-left iphone-btn-left-3" />
+              {/* Reflejo de cristal */}
+              <div className="iphone-glass" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Beneficios */}
@@ -431,7 +662,7 @@ export default function Home() {
         <h2 className="section-title">Todo lo que necesitas para<br />encontrar tu estilo</h2>
         <div className="benefits-grid">
           {[
-            { icon: "👕", title: "Outfits de gente real", desc: "Sin influencers de millones de seguidores ni ropa de pasarela. Solo personas con tu mismo estilo de vida y presupuesto compartiendo sus looks del día a día." },
+            { icon: "👕", title: "Outfits de gente como tu", desc: "Sin influencers de millones de seguidores ni ropa de pasarela. Solo personas con tu mismo estilo de vida y presupuesto compartiendo sus looks del día a día." },
             { icon: "🔍", title: "Encuentra cualquier prenda al instante", desc: "Toca cualquier prenda en cualquier outfit y la IA te dice exactamente qué es, dónde encontrarla y cuánto cuesta. Con alternativas similares en distintos rangos de precio." },
             { icon: "✨", title: "Descubre tu estilo propio", desc: "Cuanto más exploras, más aprende la IA sobre tus gustos. Tu feed se convierte en un espejo de tu identidad, no en una colección aleatoria de tendencias virales." },
           ].map((b) => (
