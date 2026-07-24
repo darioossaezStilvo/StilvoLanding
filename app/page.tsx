@@ -88,277 +88,12 @@ export default function Home() {
         }
         .nav-cta:hover { background: var(--accent); }
 
-        .hero {
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 8rem 2rem 5rem;
-          text-align: center;
-        }
-        .hero-inner { max-width: 760px; margin: 0 auto; }
-        .hero-eyebrow {
-          display: inline-block;
-          font-size: 0.78rem;
-          font-weight: 500;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          color: var(--accent);
-          background: rgba(196,123,58,0.1);
-          padding: 0.35rem 1rem;
-          border-radius: 99px;
-          margin-bottom: 1.75rem;
-        }
-        .hero h1 {
-          font-family: 'Playfair Display', serif;
-          font-size: clamp(2.8rem, 7vw, 5rem);
-          font-weight: 800;
-          line-height: 1.08;
-          letter-spacing: -0.02em;
-          color: var(--primary);
-          margin-bottom: 1.5rem;
-        }
-        .hero h1 em { font-style: normal; color: var(--accent); }
-        .hero-sub {
-          font-size: clamp(1rem, 2.5vw, 1.2rem);
-          color: var(--muted);
-          max-width: 520px;
-          margin: 0 auto 2.5rem;
-          line-height: 1.7;
-        }
-
-        .form-wrap {
-          display: flex;
-          gap: 0.6rem;
-          max-width: 480px;
-          margin: 0 auto 1rem;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .form-input {
-          flex: 1;
-          min-width: 220px;
-          padding: 0.85rem 1.25rem;
-          border: 1.5px solid var(--latte);
-          border-radius: 99px;
-          font-size: 0.95rem;
-          font-family: 'Inter', sans-serif;
-          background: #fff;
-          color: var(--text);
-          outline: none;
-          transition: border-color 0.2s;
-        }
-        .form-input:focus { border-color: var(--accent); }
-        .form-input::placeholder { color: #b0a090; }
-        .btn-primary {
-          padding: 0.85rem 1.75rem;
-          background: var(--primary);
-          color: var(--cream);
-          border: none;
-          border-radius: 99px;
-          font-size: 0.95rem;
-          font-weight: 600;
-          font-family: 'Inter', sans-serif;
-          cursor: pointer;
-          transition: background 0.2s, transform 0.15s;
-          white-space: nowrap;
-        }
-        .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-        .form-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
-        .success-msg {
-          background: rgba(196,123,58,0.12);
-          border: 1px solid var(--accent);
-          color: var(--primary);
-          padding: 0.85rem 1.5rem;
-          border-radius: var(--radius);
-          font-size: 0.95rem;
-          font-weight: 500;
-          max-width: 480px;
-          margin: 0 auto;
-        }
-
-        .counter {
-          margin-top: 2.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.75rem;
-        }
-        .counter-avatars { display: flex; }
-        .counter-avatars span {
-          width: 32px; height: 32px;
-          border-radius: 50%;
-          border: 2px solid var(--cream);
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 0.7rem;
-          font-weight: 600;
-          color: #fff;
-          margin-left: -8px;
-        }
-        .counter-avatars span:first-child { margin-left: 0; }
-        .counter-text { font-size: 0.85rem; color: var(--muted); }
-        .counter-text strong { color: var(--primary); font-weight: 600; }
-
-        .benefits {
-          padding: 6rem 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-label {
-          text-align: center;
-          font-size: 0.75rem;
-          font-weight: 500;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          color: var(--accent);
-          margin-bottom: 1rem;
-        }
-        .section-title {
-          text-align: center;
-          font-family: 'Playfair Display', serif;
-          font-size: clamp(1.8rem, 4vw, 2.75rem);
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 4rem;
-          line-height: 1.2;
-        }
-        .benefits-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-        }
-        .benefit-card {
-          background: #fff;
-          border: 0.5px solid var(--latte);
-          border-radius: var(--radius);
-          padding: 2rem;
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .benefit-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 32px rgba(59,31,10,0.08);
-        }
-        .benefit-icon {
-          width: 48px; height: 48px;
-          border-radius: 12px;
-          background: rgba(196,123,58,0.12);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 1.25rem;
-          font-size: 1.4rem;
-        }
-        .benefit-card h3 {
-          font-size: 1.05rem;
-          font-weight: 600;
-          color: var(--primary);
-          margin-bottom: 0.6rem;
-        }
-        .benefit-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
-
-        .how {
-          background: var(--primary);
-          color: var(--cream);
-          padding: 6rem 2rem;
-        }
-        .how-inner { max-width: 1100px; margin: 0 auto; }
-        .how .section-label { color: var(--accent); }
-        .how .section-title { color: var(--cream); margin-bottom: 3.5rem; }
-        .steps {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 2rem;
-        }
-        .step { display: flex; flex-direction: column; gap: 1rem; }
-        .step-num {
-          font-family: 'Playfair Display', serif;
-          font-size: 3rem;
-          font-weight: 800;
-          color: var(--accent);
-          line-height: 1;
-          opacity: 0.6;
-        }
-        .step h3 { font-size: 1.05rem; font-weight: 600; color: var(--cream); }
-        .step p { font-size: 0.9rem; color: rgba(250,246,241,0.65); line-height: 1.65; }
-
-        .social-proof {
-          padding: 6rem 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .divider {
-          width: 48px; height: 2px;
-          background: var(--accent);
-          margin: 0 auto 1.5rem;
-          border-radius: 99px;
-        }
-        .quotes-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-          margin-top: 3.5rem;
-        }
-        .quote-card {
-          background: #fff;
-          border: 0.5px solid var(--latte);
-          border-radius: var(--radius);
-          padding: 1.75rem;
-        }
-        .quote-stars { color: var(--accent); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
-        .quote-text { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
-        .quote-author { display: flex; align-items: center; gap: 0.75rem; }
-        .quote-avatar {
-          width: 36px; height: 36px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 0.75rem;
-          font-weight: 700;
-          color: #fff;
-          flex-shrink: 0;
-        }
-        .quote-name { font-size: 0.85rem; font-weight: 600; color: var(--primary); }
-        .quote-handle { font-size: 0.78rem; color: var(--muted); }
-
-        .cta-final {
-          background: var(--latte);
-          padding: 6rem 2rem;
-          text-align: center;
-        }
-        .cta-final h2 {
-          font-family: 'Playfair Display', serif;
-          font-size: clamp(1.8rem, 4vw, 2.75rem);
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 1rem;
-          line-height: 1.2;
-        }
-        .cta-final > p { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; }
-
-        footer {
-          background: var(--dark);
-          color: rgba(250,246,241,0.5);
-          text-align: center;
-          padding: 2rem;
-          font-size: 0.8rem;
-        }
-        .footer-logo {
-          font-size: 1.1rem;
-          font-weight: 800;
-          color: var(--cream);
-          margin-bottom: 0.5rem;
-          display: block;
-        }
-        .footer-logo span { font-weight: 300; color: var(--accent); }
-        hero-split {
+        .hero-split {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 45fr 55fr;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 8rem 5vw 5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -371,10 +106,6 @@ export default function Home() {
   text-align: left;
 }
  
-.hero-left .hero-eyebrow {
-  margin-bottom: 1.5rem;
-}
- 
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
@@ -384,10 +115,19 @@ export default function Home() {
   color: var(--primary);
   margin-bottom: 1.25rem;
 }
+.hero-title em { font-style: normal; color: var(--accent); }
  
-.hero-title em {
-  font-style: normal;
+.hero-left .hero-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--accent);
+  background: rgba(196,123,58,0.1);
+  padding: 0.35rem 1rem;
+  border-radius: 99px;
+  margin-bottom: 1.75rem;
 }
  
 .hero-left .hero-sub {
@@ -399,8 +139,12 @@ export default function Home() {
 }
  
 .hero-left .form-wrap {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   justify-content: flex-start;
+}
+ 
+.hero-left .form-note {
+  text-align: left;
 }
  
 .hero-left .counter {
@@ -408,7 +152,7 @@ export default function Home() {
   justify-content: flex-start;
 }
  
-/* ── iPhone wrapper ── */
+/* ── App preview flotante ── */
 .hero-right {
   display: flex;
   align-items: center;
@@ -416,108 +160,43 @@ export default function Home() {
   padding: 2rem 0;
 }
  
-.iphone-wrapper {
-  animation: iphoneFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
-}
- 
-@keyframes iphoneFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
- 
-.iphone-frame {
+.app-preview-wrapper {
   position: relative;
-  width: min(280px, 42vw);
-  aspect-ratio: 9 / 19.5;
-  background: linear-gradient(160deg, #2a2a2a 0%, #1a1a1a 40%, #111 100%);
-  border-radius: 52px;
-  box-shadow:
-    0 0 0 1.5px #3a3a3a,
-    0 0 0 3px #1a1a1a,
-    0 40px 80px rgba(0,0,0,0.45),
-    0 20px 40px rgba(0,0,0,0.3),
-    inset 0 1px 0 rgba(255,255,255,0.08);
-  padding: 14px;
-}
- 
-.iphone-island {
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30%;
-  height: 28px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 10;
-}
- 
-.iphone-screen {
   width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  overflow: hidden;
-  background: #000;
-  position: relative;
+  max-width: 540px;
+  animation: previewFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
 }
  
-/* Botones laterales derechos */
-.iphone-btn-right {
-  position: absolute;
-  right: -3px;
-  width: 3px;
-  background: #2a2a2a;
-  border-radius: 0 2px 2px 0;
-}
-.iphone-btn-right-1 {
-  top: 28%;
-  height: 14%;
-}
-.iphone-btn-right-2 {
-  top: 46%;
-  height: 20%;
+@keyframes previewFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
  
-/* Botones laterales izquierdos */
-.iphone-btn-left {
+.app-preview-glow {
   position: absolute;
-  left: -3px;
-  width: 3px;
-  background: #2a2a2a;
-  border-radius: 2px 0 0 2px;
-}
-.iphone-btn-left-1 {
-  top: 20%;
-  height: 6%;
-}
-.iphone-btn-left-2 {
-  top: 30%;
-  height: 10%;
-}
-.iphone-btn-left-3 {
-  top: 44%;
-  height: 10%;
-}
- 
-/* Efecto cristal */
-.iphone-glass {
-  position: absolute;
-  inset: 14px;
-  border-radius: 40px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.06) 0%,
-    rgba(255,255,255,0.01) 40%,
-    transparent 60%
+  inset: -20px;
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    rgba(196, 123, 58, 0.12) 0%,
+    transparent 70%
   );
+  border-radius: 32px;
   pointer-events: none;
-  z-index: 20;
+  z-index: 0;
+}
+ 
+.app-preview-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 0.5px solid rgba(196, 123, 58, 0.2);
+  box-shadow:
+    0 2px 4px rgba(59, 31, 10, 0.04),
+    0 8px 24px rgba(59, 31, 10, 0.08),
+    0 32px 64px rgba(59, 31, 10, 0.12);
 }
  
 /* ── Responsive ── */
@@ -537,19 +216,23 @@ export default function Home() {
   .hero-left .form-wrap {
     justify-content: center;
   }
+  .hero-left .form-note {
+    text-align: center;
+  }
   .hero-left .counter {
     justify-content: center;
   }
-  .iphone-frame {
-    width: min(220px, 55vw);
+  .app-preview-wrapper {
+    max-width: 320px;
   }
 }
  
 @media (max-width: 480px) {
-  .iphone-frame {
-    width: min(180px, 60vw);
+  .app-preview-wrapper {
+    max-width: 260px;
   }
 }
+
 
         @media (max-width: 600px) {
           .nav { padding: 1rem 1.25rem; }
@@ -575,7 +258,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-       <section className="hero-split">
+        <section className="hero-split">
         <div className="hero-left">
           <div className="hero-eyebrow">Próximamente · Únete a la lista de espera</div>
           <h1 className="hero-title">
@@ -627,36 +310,21 @@ export default function Home() {
           </div>
         </div>
  
-        {/* iPhone */}
         <div className="hero-right">
-          <div className="iphone-wrapper">
-            <div className="iphone-frame">
-              {/* Isla dinámica */}
-              <div className="iphone-island" />
-              {/* Pantalla con la animación */}
-              <div className="iphone-screen">
-                <iframe
-                  src="/stilvo-demo/demo.html"
-                  title="Stilvo app preview"
-                  scrolling="no"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    border: "none",
-                    borderRadius: "38px",
-                    display: "block",
-                  }}
-                />
-              </div>
-              {/* Botón lateral derecho */}
-              <div className="iphone-btn-right iphone-btn-right-1" />
-              <div className="iphone-btn-right iphone-btn-right-2" />
-              {/* Botones izquierda */}
-              <div className="iphone-btn-left iphone-btn-left-1" />
-              <div className="iphone-btn-left iphone-btn-left-2" />
-              <div className="iphone-btn-left iphone-btn-left-3" />
-              {/* Reflejo de cristal */}
-              <div className="iphone-glass" />
+          <div className="app-preview-wrapper">
+            <div className="app-preview-glow" />
+            <div className="app-preview-frame">
+              <iframe
+                src="/stilvo-demo/demo.html"
+                title="Stilvo app preview"
+                scrolling="no"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                  display: "block",
+                }}
+              />
             </div>
           </div>
         </div>
