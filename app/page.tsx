@@ -152,7 +152,7 @@ export default function Home() {
   justify-content: flex-start;
 }
  
-/* ── App preview flotante ── */
+/* â”€â”€ App preview flotante â”€â”€ */
 .hero-right {
   display: flex;
   align-items: center;
@@ -199,7 +199,7 @@ export default function Home() {
     0 32px 64px rgba(59, 31, 10, 0.12);
 }
  
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 900px) {
   .hero-split {
     grid-template-columns: 1fr;
@@ -260,14 +260,14 @@ export default function Home() {
       {/* Hero */}
         <section className="hero-split">
         <div className="hero-left">
-          <div className="hero-eyebrow">Próximamente · Únete a la lista de espera</div>
+          <div className="hero-eyebrow">PrÃ³ximamente Â· Ãšnete a la lista de espera</div>
           <h1 className="hero-title">
             Tu estilo.<br />
             Gente <em>real.</em><br />
             Un solo lugar.
           </h1>
           <p className="hero-sub">
-            Cansado de buscar inspiración entre anuncios e influencers inalcanzables.
+            Cansado de buscar inspiraciÃ³n entre anuncios e influencers inalcanzables.
             Stilvo es la red social donde personas reales comparten sus outfits
             y la IA te ayuda a encontrar las prendas exactas que ves.
           </p>
@@ -285,13 +285,13 @@ export default function Home() {
                   value={heroEmail}
                   onChange={(e) => setHeroEmail(e.target.value)}
                   required
-                  aria-label="Tu correo electrónico"
+                  aria-label="Tu correo electrÃ³nico"
                 />
-                <button type="submit" className="btn-primary">Quiero acceso →</button>
+                <button type="submit" className="btn-primary">Quiero acceso â†’</button>
               </form>
             ) : (
               <div className="success-msg">
-                ¡Ya estás dentro 🎉 Te avisamos en cuanto abramos acceso.
+                Â¡Ya estÃ¡s dentro ðŸŽ‰ Te avisamos en cuanto abramos acceso.
               </div>
             )}
             <p className="form-note">Sin spam. Solo te avisamos cuando lancemos.</p>
@@ -332,13 +332,13 @@ export default function Home() {
 
       {/* Beneficios */}
       <section className="benefits">
-        <p className="section-label">Por qué Stilvo</p>
+        <p className="section-label">Por quÃ© Stilvo</p>
         <h2 className="section-title">Todo lo que necesitas para<br />encontrar tu estilo</h2>
         <div className="benefits-grid">
           {[
-            { icon: "👕", title: "Outfits de gente como tu", desc: "Sin influencers de millones de seguidores ni ropa de pasarela. Solo personas con tu mismo estilo de vida y presupuesto compartiendo sus looks del día a día." },
-            { icon: "🔍", title: "Encuentra cualquier prenda al instante", desc: "Toca cualquier prenda en cualquier outfit y la IA te dice exactamente qué es, dónde encontrarla y cuánto cuesta. Con alternativas similares en distintos rangos de precio." },
-            { icon: "✨", title: "Descubre tu estilo propio", desc: "Cuanto más exploras, más aprende la IA sobre tus gustos. Tu feed se convierte en un espejo de tu identidad, no en una colección aleatoria de tendencias virales." },
+            { icon: "ðŸ‘•", title: "Outfits de gente como tu", desc: "Sin influencers de millones de seguidores ni ropa de pasarela. Solo personas con tu mismo estilo de vida y presupuesto compartiendo sus looks del dÃa a dÃa." },
+            { icon: "ðŸ”", title: "Encuentra cualquier prenda al instante", desc: "Toca cualquier prenda en cualquier outfit y la IA te dice exactamente quÃ© es, dÃ³nde encontrarla y cuÃ¡nto cuesta. Con alternativas similares en distintos rangos de precio." },
+            { icon: "âœ¨", title: "Descubre tu estilo propio", desc: "Cuanto mÃ¡s exploras, mÃ¡s aprende la IA sobre tus gustos. Tu feed se convierte en un espejo de tu identidad, no en una colecciÃ³n aleatoria de tendencias virales." },
           ].map((b) => (
             <div className="benefit-card" key={b.title}>
               <div className="benefit-icon">{b.icon}</div>
@@ -349,16 +349,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cómo funciona */}
+      {/* CÃ³mo funciona */}
       <section className="how">
         <div className="how-inner">
-          <p className="section-label">Cómo funciona</p>
+          <p className="section-label">CÃ³mo funciona</p>
           <h2 className="section-title">Simple de usar,<br />potente por dentro</h2>
           <div className="steps">
             {[
-              { num: "01", title: "Publica tu outfit", desc: "Sube una foto, la IA etiqueta las prendas automáticamente. Elige tu estilo y comparte con la comunidad en menos de un minuto." },
-              { num: "02", title: "Explora e inspírate", desc: "Filtra por estilo, prenda o tendencia. Descubre outfits de personas reales que se adaptan a tu gusto y presupuesto." },
-              { num: "03", title: "Identifica cualquier prenda", desc: "Toca lo que te gusta. La IA lo encuentra, te dice dónde comprarlo y te sugiere alternativas más asequibles." },
+              { num: "01", title: "Publica tu outfit", desc: "Sube una foto, la IA etiqueta las prendas automÃ¡ticamente. Elige tu estilo y comparte con la comunidad en menos de un minuto." },
+              { num: "02", title: "Explora e inspÃrate", desc: "Filtra por estilo, prenda o tendencia. Descubre outfits de personas reales que se adaptan a tu gusto y presupuesto." },
+              { num: "03", title: "Identifica cualquier prenda", desc: "Toca lo que te gusta. La IA lo encuentra, te dice dÃ³nde comprarlo y te sugiere alternativas mÃ¡s asequibles." },
             ].map((s) => (
               <div className="step" key={s.num}>
                 <span className="step-num">{s.num}</span>
@@ -374,21 +374,21 @@ export default function Home() {
       <section className="social-proof">
         <div className="divider" />
         <p className="section-label" style={{ textAlign: "center" }}>Lo que dicen nuestros primeros testers</p>
-        <h2 className="section-title">Ya están esperando el lanzamiento</h2>
+        <h2 className="section-title">Ya estÃ¡n esperando el lanzamiento</h2>
         <div className="quotes-grid">
           {[
-            { initials: "AL", color: "#8B6355", name: "Alba L.", location: "Madrid", text: "Por fin una app donde la inspiración viene de gente normal. En Instagram todo parece sacado de una revista de lujo, aquí es diferente." },
-            { initials: "MR", color: "#5C7A6B", name: "Marc R.", location: "Barcelona", text: "Lo de tocar una prenda y encontrar dónde comprarla o algo similar más barato es exactamente lo que llevaba años buscando." },
-            { initials: "LG", color: "#7B6890", name: "Laura G.", location: "Valencia", text: "Me ayudó a darme cuenta de que mi estilo tiene nombre. Ahora tengo mi feed lleno de referencias reales de quiet luxury." },
+            { initials: "AL", color: "#8B6355", name: "Alba L.", location: "Madrid", text: "Por fin una app donde la inspiraciÃ³n viene de gente normal. En Instagram todo parece sacado de una revista de lujo, aquÃ es diferente." },
+            { initials: "MR", color: "#5C7A6B", name: "Marc R.", location: "Barcelona", text: "Lo de tocar una prenda y encontrar dÃ³nde comprarla o algo similar mÃ¡s barato es exactamente lo que llevaba aÃ±os buscando." },
+            { initials: "LG", color: "#7B6890", name: "Laura G.", location: "Valencia", text: "Me ayudÃ³ a darme cuenta de que mi estilo tiene nombre. Ahora tengo mi feed lleno de referencias reales de quiet luxury." },
           ].map((q) => (
             <div className="quote-card" key={q.name}>
-              <div className="quote-stars">★★★★★</div>
+              <div className="quote-stars">â˜…â˜…â˜…â˜…â˜…</div>
               <p className="quote-text">&ldquo;{q.text}&rdquo;</p>
               <div className="quote-author">
                 <div className="quote-avatar" style={{ background: q.color }}>{q.initials}</div>
                 <div>
                   <p className="quote-name">{q.name}</p>
-                  <p className="quote-handle">Tester · {q.location}</p>
+                  <p className="quote-handle">Tester Â· {q.location}</p>
                 </div>
               </div>
             </div>
@@ -398,8 +398,8 @@ export default function Home() {
 
       {/* CTA final */}
       <section className="cta-final">
-        <h2>¿Listo para encontrar<br />tu estilo?</h2>
-        <p>Sé de los primeros en acceder cuando lancemos. Lista de espera gratuita.</p>
+        <h2>Â¿Listo para encontrar<br />tu estilo?</h2>
+        <p>SÃ© de los primeros en acceder cuando lancemos. Lista de espera gratuita.</p>
         {!bottomSuccess ? (
           <form
             className="form-wrap"
@@ -413,13 +413,13 @@ export default function Home() {
               value={bottomEmail}
               onChange={(e) => setBottomEmail(e.target.value)}
               required
-              aria-label="Tu correo electrónico"
+              aria-label="Tu correo electrÃ³nico"
             />
-            <button type="submit" className="btn-primary">Unirme a la lista →</button>
+            <button type="submit" className="btn-primary">Unirme a la lista â†’</button>
           </form>
         ) : (
           <div className="success-msg" style={{ maxWidth: 480, margin: "0 auto" }}>
-            ¡Ya estás dentro 🎉 Te avisamos en cuanto abramos acceso.
+            Â¡Ya estÃ¡s dentro ðŸŽ‰ Te avisamos en cuanto abramos acceso.
           </div>
         )}
         <p className="form-note" style={{ marginTop: "0.75rem" }}>Sin spam. Solo te avisamos cuando lancemos.</p>
@@ -428,7 +428,7 @@ export default function Home() {
       {/* Footer */}
       <footer>
         <span className="footer-logo">stil<span>vo</span></span>
-        <p>© 2026 Stilvo. Todos los derechos reservados.</p>
+        <p>Â© 2026 Stilvo. Todos los derechos reservados.</p>
         <p style={{ marginTop: "0.5rem" }}>Tu estilo. Gente real. Un solo lugar.</p>
       </footer>
     </>
