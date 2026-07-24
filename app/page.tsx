@@ -560,6 +560,12 @@ export default function Home() {
           .how { padding: 4rem 1.25rem; }
           .cta-final { padding: 4rem 1.25rem; }
         }
+          .hero-split .hero-eyebrow {
+  margin-left: 0;
+}
+.hero-split h1 {
+  text-align: left;
+}
       `}</style>
 
       {/* Nav */}
